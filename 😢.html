@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apology Letter</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #f3e6ff, #ffe6e6);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        padding: 30px 50px;
+        max-width: 600px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: #7d4ac7;
+      }
+      p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+      .heart {
+        color: #e63946;
+        font-size: 3rem;
+        animation: beat 1.5s infinite;
+        cursor: pointer;
+      }
+      .heart-container {
+        margin-top: 20px;
+      }
+      @keyframes beat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: #7d4ac7;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #5e3a96;
+      }
+    </style>
+    <script>
+      function showLove() {
+        const message = document.createElement("p");
+        message.textContent =
+          "I promise to do better and always make you smile.";
+        message.style.color = "#7d4ac7";
+        message.style.fontSize = "1.5rem";
+        message.style.marginTop = "20px";
+        document.querySelector(".container").appendChild(message);
+      }
+
+      function addHeart() {
+        const heartContainer = document.querySelector(".heart-container");
+        const newHeart = document.createElement("div");
+        newHeart.textContent = "❤";
+        newHeart.className = "heart";
+        newHeart.style.fontSize = "2rem";
+        newHeart.style.margin = "5px";
+        newHeart.style.display = "inline-block";
+        heartContainer.appendChild(newHeart);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I'm Sorry</h1>
+      <p>
+        My dearest Mayssa, I know I hurt you, and for that, I am deeply sorry.
+        You mean the world to me, and I can't stand the thought of causing you
+        pain. I wish I could go back in time and undo my mistakes, but since I
+        can't, I promise to make amends and prove to you how much you mean to
+        me. Every moment we spend together brings light into my life, and the
+        thought of losing you feels unbearable. Please know that I am willing to
+        do whatever it takes to regain your trust and make things right. You are
+        my heart, my joy, and my everything. I cherish every smile, every laugh,
+        and every memory we've shared. I want us to create many more beautiful
+        memories together, and I promise to be more understanding, caring, and
+        attentive to your needs. I hope you can find it in your heart to forgive
+        me. I love you more than words can express, and I will work every day to
+        show you how much you mean to me.
+      </p>
+      <div class="heart-container">
+        <div class="heart" onclick="addHeart()">❤</div>
+      </div>
+      <button onclick="showLove()">I Love You</button>
+    </div>
+  </body>
+</html>
